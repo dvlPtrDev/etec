@@ -1,0 +1,20 @@
+@media (min-width: 400px) {
+    main {
+        width: 300px;
+        height: 475px;
+    }
+    .remember-forgot {
+        margin: 0 5px 20px 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .remember {
+        display: inline;
+    }
+}
+@media (min-width: 650px) {
+    main {
+        width: 400px;
+        height: 500px;
+    }
+}

@@ -1,0 +1,177 @@
+
+/**
+ * configuração para mobile 
+ */
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* É usado como referência por todos dentro dele que usam position absolute*/
+    position: relative;
+
+    width: 400px;
+    min-height: 400px;
+    height: 100vh;
+
+    padding: 10px;
+
+    /* Deixa o fundo sem cor */
+    background: transparent;
+
+    border: 1.5px solid rgb(251, 251, 251);
+    border-radius: 15px;
+
+    /* deixa o fundo borrado */
+    backdrop-filter: blur(10px);
+    /* Compatibilidade para microsoft edge*/
+    -webkit-backdrop-filter: blur(10px);
+
+    /* Animação para o login aparecer */
+    animation: showLogin 0.8s ease-in-out;
+}
+@keyframes showLogin {
+    from {
+        /* Inicia o main transparente e 30px para baixo */
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        /* Faz a transição suave para a posição original */
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.title {
+    text-align: center;
+    text-shadow: 0px 0px 20px rgb(95, 7, 162);
+}
+form {
+    width: 100%;
+}
+
+
+.input-box {
+    position: relative;
+
+    width: 100%;
+    margin: 30px 0;
+
+
+    border-bottom: 1.5px solid #fff;
+}
+
+/* Input */
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 40px 0 5px;
+
+    border: none;
+    /* Sem borda com o input selecionado  */
+    outline: none;
+
+    background: transparent;
+
+    color: #fff;
+
+    font-size: 1em;
+}
+
+/* Label */
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+
+    /* Empurra o texto para cima em metade da própria altura, deixa o label flutuando */
+    transform: translateY(-50%);
+
+    font-size: 1em;
+
+    /* Duração de qualquer transição */
+    transition: .5s;
+}
+/* Transição quando o input estiver selecionado */
+/* ~ pega os labels irmãos de input (Elementos com o mesmo elemento pai) */
+.input-box input:focus~label,
+/* :not(:placeholder-shown) = quando o input estiver selecionado (Placeholder não aparece) */
+.input-box input:not(:placeholder-shown) ~ label {
+    /* Desloca o label para cima quando o input é selecionado */ 
+    top: -5px;
+}
+.input-box .icon {
+    position: absolute;
+
+    right: 8px;
+    top: 0;
+
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+
+    color: #fff;
+
+    font-size: 1.5em;
+}
+.input-box .toggle-pwd-icon {
+    display: none;
+    position: absolute;
+    right: 50px;
+    top: 0;
+    height: 60px;
+    font-size: 1.2em;
+}
+.remember-forgot {
+    font-size: .8em;
+    margin-bottom: 20px;
+}
+
+.remember {
+    /* Esconde o botão de lembrar em telas pequenas (Não cabe) */
+    display: none;
+}
+
+button {
+    width: 100%;
+    height: 45px;
+
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+
+    border-radius: 40px;
+
+    background: #fff;
+
+    color: #000;
+
+    font-size: 1em;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #e9e9e9;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.register {
+    text-align: center;
+}
+.register a {
+    text-decoration: none;
+    font-weight: bolder;
+}
