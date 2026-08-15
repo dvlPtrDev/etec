@@ -25,7 +25,7 @@ body {
     /* Altura mínima do body */
     min-height: 100vh;
     /* Fundo */
-    background-image: url("static/img/bg.jpg");
+    background-image: url("../img/bg.jpg");
     background-position: center;
     /* A imagem de fundo deve preencher a tela */
     background-repeat: no-repeat;
