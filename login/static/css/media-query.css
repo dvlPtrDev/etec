@@ -1,3 +1,6 @@
+/* 
+ * Configurações para diferentes telas
+*/
 @media (min-width: 400px) {
     main {
         width: 300px;
